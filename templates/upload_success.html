@@ -1,0 +1,21 @@
+<!-- templates/upload_success.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传成功</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>上传成功!</h1>
+        <p>视频 ID: {{ result['video_id'] }}</p>
+        <p>封面 URI: {{ result['poster_uri'] }}</p>
+        <p>文件名: {{ result['file_name'] }}</p>
+        <p>视频宽度: {{ result['width'] }}</p>
+        <p>视频高度: {{ result['height'] }}</p>
+        <a href="/">返回主页</a>
+    </div>
+</body>
+</html>

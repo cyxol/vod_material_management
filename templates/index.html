@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火山云视频上传</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>上传视频到火山云</h1>
+        <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="video" accept="video/*" required>
+            <button type="submit">上传视频</button>
+        </form>
+    </div>
+</body>
+</html>
